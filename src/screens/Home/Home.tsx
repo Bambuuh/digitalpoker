@@ -5,8 +5,10 @@ import { ScreenContainer } from '../../components/Container/Container'
 import createGame from '../../game/api/createGame'
 import Input from '../../components/Input'
 import joinGame from '../../game/api/joinGame'
+import { useDispatch } from 'react-redux'
 
-export const Home: FunctionComponent = () => {
+const Home: FunctionComponent = () => {
+  const dispatch = useDispatch()
   const [gameId, setGameId] = useState('')
 
   const onChangeGameId = (value: string) => {
